@@ -40,7 +40,18 @@ const marketSchedule = [
 ];
 
 function Schedule() {
-  return <React.Fragment></React.Fragment>;
+  return (
+    <React.Fragment>
+      {marketSchedule.map((x) => (
+        <div>
+          <p>Day: {x.day}</p>
+          <p>Location: {x.location}</p>
+          <p>Hours: {x.hours}</p>
+          <p>Booth: {x.booth}</p>
+        </div>
+      ))}
+    </React.Fragment>
+  );
 }
 
 export default Schedule;
